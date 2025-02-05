@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { ServicesSection } from "@/components/services-section";
 import { StatsSection } from "@/components/stats-section";
+import { TestimonialsSection } from "@/components/testimonials-section";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <HeroSection language={language} />
       <ServicesSection language={language} />
       <StatsSection language={language} />
+      <TestimonialsSection language={language} />
       <Footer />
     </div>
   );
