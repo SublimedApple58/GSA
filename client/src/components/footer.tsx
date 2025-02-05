@@ -1,6 +1,4 @@
 import { Instagram, Facebook, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 
 export function Footer() {
   return (
@@ -32,16 +30,6 @@ export function Footer() {
         </div>
         <div className="text-center mt-6 text-sm text-muted-foreground">
           © 2024 House of Muscle. All rights reserved.
-        </div>
-        <div className="mt-8 text-center">
-          <p className="text-sm text-muted-foreground mb-4">
-            Pronto a trasformare il tuo fisico? Inizia il tuo percorso con noi.
-          </p>
-          <Link href="/coaching">
-            <Button variant="default" size="lg">
-              Scopri il Coaching
-            </Button>
-          </Link>
         </div>
       </div>
     </footer>

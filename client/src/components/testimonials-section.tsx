@@ -7,6 +7,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export function TestimonialsSection() {
   const transformations = [
@@ -64,6 +66,17 @@ export function TestimonialsSection() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+
+        <div className="mt-12 text-center">
+          <p className="text-lg text-muted-foreground mb-4">
+            Pronto a trasformare il tuo fisico? Inizia il tuo percorso con noi.
+          </p>
+          <Link href="/coaching">
+            <Button size="lg" className="text-lg px-8">
+              Scopri il Coaching
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
