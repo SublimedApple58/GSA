@@ -27,7 +27,7 @@ export function HeroSection() {
           className="flex-1 relative"
         >
           <img 
-            src="/attached_assets/complete_body.png" 
+            src="/assets/complete_body.png" 
             alt="Professional Coach"
             className="w-full max-w-lg mx-auto object-contain"
             style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.3))' }}

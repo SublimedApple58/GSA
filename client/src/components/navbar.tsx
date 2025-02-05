@@ -16,7 +16,7 @@ export function Navbar() {
         <div className="flex h-16 items-center">
           <Link href="/" className="mr-8">
             <img 
-              src="/attached_assets/icon_umberto.png"
+              src="/assets/icon_umberto.png"
               alt="Logo"
               className="h-8 w-8 object-contain hover:opacity-80 transition-opacity"
             />
