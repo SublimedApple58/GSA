@@ -35,11 +35,11 @@ export function TestimonialsSection() {
             align: "start",
             loop: true
           }}
-          className="w-full max-w-5xl mx-auto"
+          className="w-full max-w-4xl mx-auto"
         >
           <CarouselContent>
             {transformations.map((image, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
