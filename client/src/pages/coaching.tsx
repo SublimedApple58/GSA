@@ -31,7 +31,7 @@ export default function Coaching() {
   return (
     <div className="min-h-screen bg-background text-foreground pt-16">
       <LanguageToggle language={language} setLanguage={setLanguage} />
-      <Navbar language={language} />
+      <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -45,7 +45,7 @@ export default function Coaching() {
                 className="w-48 h-48 mb-8"
               >
                 <img
-                  src="/assets/foto2.png"
+                  src="/assets/GSA1.png"
                   alt="GSA Logo"
                   className="w-full h-full object-contain"
                 />
