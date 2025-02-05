@@ -1,18 +1,12 @@
 import { Link, useLocation } from "wouter";
-import { translations, Language } from "@/lib/translations";
 import { Dumbbell } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-interface Props {
-  language: Language;
-}
-
-export function Navbar({ language }: Props) {
-  const t = translations[language];
+export function Navbar() {
   const [location] = useLocation();
 
   const navItems = [
-    { href: "/articles", label: "Articles" },
+    { href: "/articles", label: "Articoli" },
     { href: "/coaching", label: "Coaching" },
     { href: "/patreon", label: "Patreon" }
   ];

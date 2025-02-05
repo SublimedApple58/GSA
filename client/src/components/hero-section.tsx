@@ -1,13 +1,6 @@
 import { motion } from "framer-motion";
-import { translations, Language } from "@/lib/translations";
 
-interface Props {
-  language: Language;
-}
-
-export function HeroSection({ language }: Props) {
-  const t = translations[language];
-
+export function HeroSection() {
   return (
     <section className="min-h-screen bg-background flex items-center justify-center relative overflow-hidden pt-16">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-background z-0" />
@@ -20,10 +13,10 @@ export function HeroSection({ language }: Props) {
           className="flex-1 text-center md:text-left"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
-            {t.hero.title}
+            Coaching Fitness Professionale
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
-            {t.hero.subtitle}
+            Raggiungi i tuoi obiettivi fitness con una guida esperta
           </p>
         </motion.div>
 

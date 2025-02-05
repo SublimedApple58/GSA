@@ -1,33 +1,26 @@
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Dumbbell, Utensils, Crown } from "lucide-react";
-import { translations, Language } from "@/lib/translations";
 import { Link } from "wouter";
 
-interface Props {
-  language: Language;
-}
-
-export function ServicesSection({ language }: Props) {
-  const t = translations[language];
-
+export function ServicesSection() {
   const services = [
     {
       icon: Dumbbell,
-      title: t.services.training,
-      description: "Personalized training programs tailored to your goals",
+      title: "Programmi di Allenamento",
+      description: "Programmi personalizzati in base ai tuoi obiettivi",
       link: "/coaching"
     },
     {
       icon: Utensils,
-      title: t.services.nutrition,
-      description: "Expert nutrition guidance and supplement recommendations",
+      title: "Alimentazione e Integratori",
+      description: "Consulenza nutrizionale e piano integratori",
       link: "/coaching"
     },
     {
       icon: Crown,
-      title: "Exclusive Content",
-      description: "Join our Patreon for exclusive training content and tips",
+      title: "Contenuti Esclusivi",
+      description: "Unisciti al nostro Patreon per contenuti esclusivi",
       link: "/patreon"
     }
   ];
@@ -41,7 +34,7 @@ export function ServicesSection({ language }: Props) {
           viewport={{ once: true }}
           className="text-3xl font-bold text-center mb-12"
         >
-          {t.services.title}
+          I Nostri Servizi
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

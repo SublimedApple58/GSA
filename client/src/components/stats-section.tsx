@@ -1,17 +1,10 @@
 import { motion } from "framer-motion";
-import { translations, Language } from "@/lib/translations";
 
-interface Props {
-  language: Language;
-}
-
-export function StatsSection({ language }: Props) {
-  const t = translations[language];
-
+export function StatsSection() {
   const stats = [
-    { value: "10+", label: t.stats.experience },
-    { value: "500+", label: t.stats.clients },
-    { value: "20+", label: t.stats.competitions }
+    { value: "10+", label: "Anni di Esperienza" },
+    { value: "500+", label: "Clienti Soddisfatti" },
+    { value: "20+", label: "Competizioni Vinte" }
   ];
 
   return (
