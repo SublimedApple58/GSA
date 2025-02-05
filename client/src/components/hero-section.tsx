@@ -29,7 +29,7 @@ export function HeroSection() {
           <img 
             src="/assets/complete_body.png" 
             alt="Professional Coach"
-            className="w-full max-w-lg mx-auto object-contain"
+            className="w-[150%] max-w-none ml-[-25%] object-contain"
             style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.3))' }}
           />
         </motion.div>
