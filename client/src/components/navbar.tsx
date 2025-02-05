@@ -1,5 +1,4 @@
 import { Link, useLocation } from "wouter";
-import { Dumbbell } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -16,7 +15,11 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center">
           <Link href="/" className="mr-8">
-            <Dumbbell className="h-8 w-8 text-primary hover:text-primary/80 transition-colors" />
+            <img 
+              src="/attached_assets/icon_umberto.png"
+              alt="Logo"
+              className="h-8 w-8 object-contain hover:opacity-80 transition-opacity"
+            />
           </Link>
 
           <div className="flex items-center space-x-8">

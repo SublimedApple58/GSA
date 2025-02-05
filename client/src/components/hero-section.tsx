@@ -24,12 +24,13 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="flex-1"
+          className="flex-1 relative"
         >
           <img 
-            src="/images/coach.png" 
+            src="/attached_assets/complete_body.png" 
             alt="Professional Coach"
-            className="rounded-lg shadow-2xl w-full max-w-lg mx-auto"
+            className="w-full max-w-lg mx-auto object-contain"
+            style={{ filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.3))' }}
           />
         </motion.div>
       </div>
