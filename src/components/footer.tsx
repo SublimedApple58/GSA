@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex justify-center space-x-6">
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/umbertogiancola?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -14,15 +14,7 @@ export function Footer() {
             <Instagram className="w-6 h-6" />
           </a>
           <a 
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <Facebook className="w-6 h-6" />
-          </a>
-          <a 
-            href="mailto:contact@example.com"
+            href="umbertogiancola@gmail.com"
             className="text-muted-foreground hover:text-primary transition-colors"
           >
             <Mail className="w-6 h-6" />
