@@ -13,10 +13,10 @@ export function HeroSection() {
           className="flex-1 text-center md:text-left"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
-            Coaching Fitness Professionale
+            Umberto Giancola Coaching
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
-            Raggiungi i tuoi obiettivi fitness con una guida esperta
+            Affidati a chi conosce la ghisa
           </p>
         </motion.div>
 
