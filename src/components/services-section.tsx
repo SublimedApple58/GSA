@@ -19,9 +19,9 @@ export function ServicesSection() {
     },
     {
       icon: Crown,
-      title: "Contenuti Esclusivi",
-      description: "Unisciti al nostro Patreon per contenuti esclusivi",
-      link: "/patreon"
+      title: "Iscriviti ai nostri canali social",
+      description: "Contenuti esclusivi, vivi il bodybuilding a 360 gradi",
+      link: "/social"
     }
   ];
 

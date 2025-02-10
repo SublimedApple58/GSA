@@ -7,18 +7,18 @@ export function Navbar() {
   const navItems = [
     { href: "/articles", label: "Articoli" },
     { href: "/coaching", label: "Coaching" },
-    { href: "/patreon", label: "Patreon" }
+    { href: "/social", label: "Social" }
   ];
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between space-x-8">
+        <div className="flex h-24 items-center justify-between space-x-8">
           <a href="/">
             <img 
               src="/assets/icon_umberto.png"
               alt="Logo"
-              className="h-14 w-14 object-contain"
+              className="h-16 w-16 object-contain rounded-full bg-background p-1"
             />
           </a>
           <div className="flex items-center space-x-12">
