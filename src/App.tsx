@@ -8,6 +8,8 @@ import Articles from "@/pages/articles";
 import Coaching from "@/pages/coaching";
 import Social from "@/pages/social";
 import React from "react";
+import { useFetch } from "./useFetch"
+import { ArticlesEditor } from "./components/articles-editor";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -26,6 +28,7 @@ function Router() {
       <Route path="/articles" component={Articles} />
       <Route path="/coaching" component={Coaching} />
       <Route path="/social" component={Social} />
+      <Route path="/editor" component={ArticlesEditor}/>
       <Route component={NotFound} />
     </Switch>
   );
