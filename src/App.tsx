@@ -10,6 +10,7 @@ import Social from "@/pages/social";
 import React from "react";
 import { useFetch } from "./useFetch"
 import { ArticlesEditor } from "./components/articles-editor";
+import ArticleDetail from "./components/article-detail";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -29,6 +30,13 @@ function Router() {
       <Route path="/coaching" component={Coaching} />
       <Route path="/social" component={Social} />
       <Route path="/editor" component={ArticlesEditor}/>
+      <Route path="/article">
+        {(params) => {
+          const searchParams = new URLSearchParams(window.location.search);
+          const id = searchParams.get('id');
+          return <ArticleDetail id={id || ''} />;
+        }}
+      </Route>
       <Route component={NotFound} />
     </Switch>
   );

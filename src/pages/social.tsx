@@ -42,8 +42,8 @@ export default function Social() {
           Entra a far parte della nostra community e scopri contenuti esclusivi dedicati al bodybuilding e al fitness
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-          <Card className="p-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl">
+        <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto mb-12">
+          {/* <Card className="p-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl">
             <div className="flex items-center gap-4 mb-4">
               <FaYoutube className="w-8 h-8 text-red-600" />
               <h2 className="text-2xl font-semibold">YouTube</h2>
@@ -68,7 +68,7 @@ export default function Social() {
                 Iscriviti al Canale
               </Button>
             </CardContent>
-          </Card>
+          </Card> */}
 
           <Card className="p-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl">
             <div className="flex items-center gap-4 mb-4">

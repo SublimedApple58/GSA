@@ -99,9 +99,11 @@ export default function Coaching() {
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-8">Pronto a Iniziare?</h2>
-            <Button size="lg" className="text-lg px-8">
-              Contattaci Ora
-            </Button>
+            <a href="https://wa.me/393286779606?text=info%20coach">
+              <Button size="lg" className="text-lg px-8" >
+                Contattaci Ora
+              </Button>
+            </a>
           </div>
         </section>
       </main>
