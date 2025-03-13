@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export function StatsSection() {
   const stats = [
     { value: "10+", label: "Anni di Esperienza" },
-    { value: "30+", label: "Clienti Soddisfatti" },
+    { value: "100+", label: "Clienti Soddisfatti" },
     { value: "5+", label: "Competizioni Vinte" }
   ];
 

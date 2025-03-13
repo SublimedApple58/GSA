@@ -11,14 +11,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 export function TestimonialsSection() {
-  const transformations = [
-    "/assets/transformations/test1.jpeg",
-    "/assets/transformations/test2.jpeg",
-    "/assets/transformations/test3.jpeg",
-    "/assets/transformations/test4.jpeg",
-    "/assets/transformations/test5.jpeg",
-    "/assets/transformations/test6.jpeg",
-  ];
+  const transformations = Array.from({ length: 19 }, (_, i) => 
+    `/assets/transformations/test${i + 1}.jpeg`
+  );  
 
   return (
     <section className="py-20 bg-card">
@@ -35,9 +30,10 @@ export function TestimonialsSection() {
         <Carousel
           opts={{
             align: "start",
-            loop: true
+            loop: true,
           }}
-          className="w-full max-w-4xl mx-auto"
+          // Su mobile lo slider sarà più stretto (max-w-[280px]) e da sm in su avrà una larghezza maggiore (max-w-4xl)
+          className="w-full max-w-[280px] sm:max-w-4xl mx-auto"
         >
           <CarouselContent>
             {transformations.map((image, index) => (
@@ -54,7 +50,8 @@ export function TestimonialsSection() {
                         <img
                           src={image}
                           alt={`Trasformazione ${index + 1}`}
-                          className="w-full h-full object-cover"
+                          // Su mobile usa object-contain, da sm in su object-cover
+                          className="w-full h-full object-contain sm:object-cover"
                         />
                       </div>
                     </CardContent>
@@ -63,8 +60,8 @@ export function TestimonialsSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="flex" />
+          <CarouselNext className="flex" />
         </Carousel>
 
         <div className="mt-12 text-center">

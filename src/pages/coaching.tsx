@@ -62,9 +62,20 @@ export default function Coaching() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-xl text-muted-foreground mb-8"
+                className="text-xl text-muted-foreground my-4 mt-8"
               >
-                La tua trasformazione inizia qui
+                  <p>
+                    Ciao, sono Umberto Giancola, coach di bodybuilding con oltre 10 anni di esperienza nel settore. Il mio obiettivo principale è aiutare le persone a tirare fuori il loro miglior potenziale, trasformando non solo il loro corpo, ma anche la loro mentalità.
+                  </p>
+                  <p className="mt-4">
+                    Nel corso degli anni, ho avuto l’opportunità di lavorare con centinaia di persone, ognuna con obiettivi diversi: dalla preparazione per una gara, al miglioramento fisico per sentirsi meglio con se stessi. Ogni persona è unica, e il mio approccio si adatta alle necessità specifiche di ciascuno.
+                  </p>
+                  <p className="mt-4">
+                    Lavoro seguendo i principi della vecchia scuola, che mi hanno permesso di ottenere risultati concreti, ma tengo sempre a mente le ultime ricerche e gli sviluppi nel campo del fitness e della nutrizione per offrire un programma moderno e completo.
+                  </p>
+                  <p className="mt-4">
+                    Se sei pronto a intraprendere un percorso di trasformazione fisica e mentale, sono qui per aiutarti a raggiungere il tuo massimo potenziale.
+                  </p>
               </motion.p>
             </div>
           </div>
