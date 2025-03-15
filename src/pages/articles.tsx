@@ -28,10 +28,6 @@ export default function Articles() {
 
     fetchArticles();
   }, []);
-  
-  if(!articles){
-    return <div className="min-h-screen flex items-center justify-center bg-background">Caricamento articoli...</div>;
-  }
 
   return (
     <div className="min-h-screen bg-background text-foreground pt-16">

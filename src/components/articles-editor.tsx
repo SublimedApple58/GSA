@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { useFetch } from "../useFetch";
 import { Navbar } from "./navbar";
+import { ArticleHandler } from "./article-handler";
 
 export function ArticlesEditor(): React.ReactElement {
     const [authorized, setAuthorized] = useState<boolean>(false);
@@ -37,48 +36,23 @@ export function ArticlesEditor(): React.ReactElement {
 
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    const [title, setTitle] = useState<string>("");
-    const [description, setDescription] = useState<string>("");
-    const [date, setDate] = useState<string>("");
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-
-        if(!title || !description || !date){
-            setError(true);
-            return
-        }
-        
-        const response = await useFetch({
-            url: "https://gsa-server.onrender.com/articles",
-            method: "POST",
-            data: { title, description, date }
-        });
-
-        if (response.status) {
-            setSuccess(true);
-            setTitle("");
-            setDescription("");
-            setDate("");
-        } else {
-            setError(true);
-        }
-    };
 
     return (
         <>
             <Navbar/>
             <div className="container mx-auto px-4 py-8" style={{marginTop: "80px"}}>
-                {error && (
-                    <div className="bg-red-500 text-white text-center py-2 rounded-md mb-4">
-                        Errore di compilazione
-                    </div>
-                )}
-                {success && (
-                    <div className="bg-green-300 text-black text-center py-2 rounded-md mb-4">
-                        Articolo salvato con successo!
-                    </div>
-                )}
+                <div className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center mt-4">
+                    {error && (
+                        <div className="bg-red-500 text-white text-center py-2 px-4 rounded-md mb-2">
+                            Errore con l'operazione
+                        </div>
+                    )}
+                    {success && (
+                        <div className="bg-green-300 text-black text-center py-2 px-4 rounded-md mb-2">
+                            Operazione andata a buon fine!
+                        </div>
+                    )}
+                </div>
                 {!authorized ? (
                     <Card className="max-w-2xl mx-auto">
                         <CardHeader>
@@ -117,48 +91,7 @@ export function ArticlesEditor(): React.ReactElement {
                             </form>
                         </CardContent>
                     </Card>
-                ) : (
-                    <Card className="max-w-2xl mx-auto">
-                        <CardHeader>
-                            <CardTitle className="text-2xl">Editor Articoli</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="space-y-2">
-                                    <Label htmlFor="title">Titolo</Label>
-                                    <Input 
-                                        id="title"
-                                        value={title}
-                                        onChange={(e) => setTitle(e.target.value)}
-                                        placeholder="Inserisci il titolo dell'articolo"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="date">Data</Label>
-                                    <Input 
-                                        id="date"
-                                        value={date}
-                                        onChange={(e) => setDate(e.target.value)}
-                                        placeholder="Inserisci la data di oggi"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <Label htmlFor="description">Descrizione</Label>
-                                    <Textarea 
-                                        id="description"
-                                        value={description}
-                                        onChange={(e) => setDescription(e.target.value)}
-                                        placeholder="Inserisci la descrizione dell'articolo"
-                                        rows={5}
-                                    />
-                                </div>
-                                <Button type="submit" className="w-full">
-                                    Salva Articolo
-                                </Button>
-                            </form>
-                        </CardContent>
-                    </Card>
-                )}
+                ) : <ArticleHandler setError={setError} setSuccess={setSuccess}/>}
             </div>
         </>
     );
