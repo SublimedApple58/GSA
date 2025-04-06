@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 export function TestimonialsSection() {
-  const transformations = Array.from({ length: 19 }, (_, i) => 
+  const transformations = Array.from({ length: 21 }, (_, i) => 
     `/assets/transformations/test${i + 1}.jpeg`
   );  
 
